@@ -1,0 +1,105 @@
+/* Outer wrapper — always column, title above grid */
+.portfolio > .container {
+  flex-direction: column;
+  gap: 72px;
+  justify-content: flex-start;
+}
+
+/* Inner ul — responsive grid */
+.portfolio ul.container {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 48px;
+}
+
+.portfolio-title {
+  text-align: center;
+  color: #2e2f42;
+  line-height: 1.11;
+}
+
+/* Mobile: full-width single column */
+.portfolio-element {
+  width: 100%;
+  transition: box-shadow 250ms linear;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-element:hover,
+.portfolio-element:focus {
+  box-shadow:
+    0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-card-content {
+  padding: 32px 16px;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.portfolio-element-title {
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.portfolio-img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-overlay-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+
+.portfolio-element:hover .portfolio-overlay-box,
+.portfolio-element:focus .portfolio-overlay-box {
+  transform: translateY(0);
+}
+
+.portfolio-overlay-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  margin: 0;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .portfolio ul.container {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .portfolio-element {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* Desktop: 3 columns — column-gap:24px carries over from tablet */
+@media (min-width: 1158px) {
+  .portfolio ul.container {
+    row-gap: 48px;
+  }
+
+  .portfolio-element {
+    width: calc((100% - 48px) / 3);
+  }
+}

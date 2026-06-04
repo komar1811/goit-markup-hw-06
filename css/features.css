@@ -1,0 +1,78 @@
+/* Outer section wrapper — always stacks h2 + ul vertically */
+.features > .container {
+  flex-direction: column;
+}
+
+/* Inner ul — the responsive grid */
+.features ul.container {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 72px;
+}
+
+.features-element {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Icon box hidden on mobile and tablet */
+.icon-container {
+  display: none;
+}
+
+.features-element .icon {
+  width: 64px;
+  height: 64px;
+}
+
+/* Mobile: feature heading styled like a section title */
+.features-element h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  color: #2e2f42;
+}
+
+.features-element-text {
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .features ul.container {
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+
+  .features-element {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (min-width: 1158px) {
+  .features ul.container {
+    gap: 24px;
+  }
+
+  .features-element {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+  }
+
+  .features-element h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}

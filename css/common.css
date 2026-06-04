@@ -1,0 +1,180 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #434455;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07142857143;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #2e2f42;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  text-decoration: underline;
+  line-height: 1.5;
+}
+
+.social-links a {
+  line-height: 1;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  color: #2e2f42;
+  text-decoration: none;
+}
+
+.logo-web {
+  color: #4d5ae5;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+@media (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 24px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(77, 90, 229, 1);
+  fill: rgba(244, 244, 253, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms linear;
+}
+
+.social-link .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer .social-link .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.team .social-link:focus,
+.team .social-link:hover {
+  background-color: #404bbf;
+}
+
+.footer .social-link:focus,
+.footer .social-link:hover {
+  background-color: #31d0aa;
+}
