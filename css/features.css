@@ -27,12 +27,18 @@
   height: 64px;
 }
 
-/* Mobile: feature heading styled like a section title */
+/* Mobile: feature heading styled like a section title, centered */
 .features-element h3 {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
   color: #2e2f42;
+  text-align: center;
+}
+
+/* Mobile & tablet: description text medium weight */
+.features-element p {
+  font-weight: 500;
 }
 
 .features-element-text {
@@ -41,12 +47,16 @@
 
 @media (min-width: 768px) {
   .features ul.container {
-    row-gap: 48px;
+    row-gap: 72px;
     column-gap: 24px;
   }
 
   .features-element {
     width: calc((100% - 24px) / 2);
+  }
+
+  .features-element h3 {
+    text-align: left;
   }
 }
 
@@ -74,5 +84,9 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
+  }
+
+  .features-element p {
+    font-weight: 400;
   }
 }

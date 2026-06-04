@@ -128,6 +128,15 @@
   color: #404bbf;
 }
 
+.mobile-menu .social-links {
+  gap: 40px;
+}
+
+.mobile-menu .social-link .icon {
+  width: 24px;
+  height: 24px;
+}
+
 @media (min-width: 768px) {
   .mobile-menu {
     display: none;

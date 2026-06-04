@@ -1,7 +1,15 @@
 .footer {
   background-color: #2e2f42;
   color: #f4f4fd;
-  padding: 100px 0;
+  /* Explicit mobile padding — prevents double-stacking with .section */
+  padding: 96px 0;
+}
+
+/* Desktop: dedicated footer padding value */
+@media (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 
 .footer .logo {
@@ -21,12 +29,12 @@
 .copyrights-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-text {
   width: 264px;
-  text-align: center;
+  text-align: left;
 }
 
 .social-media {
@@ -71,8 +79,9 @@
   gap: 16px;
 }
 
+/* Mobile: input fills full container width */
 .subscribe-form-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   border-radius: 4px;
   padding: 8px 16px;
@@ -124,7 +133,8 @@
 }
 
 /* Tablet: copyrights + social on row 1, subscribe wraps to row 2 */
-@media (min-width: 768px) {
+/* max-width: 584px keeps footer content narrower than main page sections */
+@media (min-width: 768px) and (max-width: 1157px) {
   .footer-organizer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -132,14 +142,11 @@
     justify-content: flex-start;
     column-gap: 24px;
     row-gap: 72px;
+    max-width: 584px;
   }
 
   .copyrights-container {
     align-items: flex-start;
-  }
-
-  .footer-text {
-    text-align: left;
   }
 
   .social-media {
@@ -162,18 +169,38 @@
   }
 }
 
-/* Desktop: all 3 in a single row with specific spacing */
+/* Desktop: all 3 in a single row, subscribe pushed to right edge */
 @media (min-width: 1158px) {
   .footer-organizer {
+    flex-direction: row;
     flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 0;
   }
 
   .copyrights-container {
+    align-items: flex-start;
     margin-right: 120px;
   }
 
   .social-media {
-    margin-right: 80px;
+    align-items: flex-start;
+  }
+
+  .subscribe-container {
+    align-items: flex-start;
+    margin-left: auto;
+  }
+
+  /* Tablet: input and button side by side */
+  .subscribe-form {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .subscribe-form-input {
+    width: 264px;
   }
 }

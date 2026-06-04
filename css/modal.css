@@ -28,7 +28,8 @@
 /* Mobile: near-full-width, height driven by content */
 .modal {
   position: relative;
-  width: calc(100% - 32px);
+  width: 288px;
+  max-width: 288px;
   height: auto;
   min-height: 584px;
   border-radius: 4px;
